@@ -1,6 +1,6 @@
 import { defineDocumentType, makeSource } from 'contentlayer/source-files'
 import remarkGfm from 'remark-gfm'
-import rehypePrism from '@mapbox/rehype-prism'
+import rehypePrettyCode from 'rehype-pretty-code'
 
 /** @type {import('contentlayer/source-files').ComputedFields} */
 const computedFields = {
@@ -39,6 +39,6 @@ export default makeSource({
   documentTypes: [Article],
   mdx: {
     remarkPlugins: [remarkGfm],
-    rehypePlugins: [rehypePrism],
+    rehypePlugins: [[rehypePrettyCode, { theme: 'dracula' }]],
   },
 })
