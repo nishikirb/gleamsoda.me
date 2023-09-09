@@ -1,5 +1,5 @@
 {
-  "name": "",
+  "name": "gleamsoda.me",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
@@ -13,11 +13,17 @@
     "@astrojs/mdx": "^1.0.0",
     "@astrojs/react": "^3.0.0",
     "@astrojs/tailwind": "^5.0.0",
+    "@fontsource-variable/comfortaa": "^5.0.8",
+    "@headlessui/react": "^1.7.17",
+    "@tailwindcss/typography": "^0.5.10",
     "@types/react": "^18.0.21",
     "@types/react-dom": "^18.0.6",
     "astro": "^3.0.8",
+    "clsx": "^2.0.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
+    "rehype-pretty-code": "^0.10.1",
+    "remark-gfm": "^3.0.1",
     "tailwindcss": "^3.0.24"
   }
 }

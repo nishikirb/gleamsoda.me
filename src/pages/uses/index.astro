@@ -1,0 +1,23 @@
+---
+import IndexLayout from "@/layouts/IndexLayout.astro";
+import { ToolsSection, Tool } from "@/components/Tools";
+import { getCollection } from "astro:content";
+
+const uses = await getCollection("uses").then((res) =>
+  res.sort((a, b) => a.data.order - b.data.order)
+);
+---
+
+<IndexLayout title="Uses">
+  <div class="space-y-20">
+    {
+      uses.map(({ data }) => (
+        <ToolsSection title={data.title}>
+          {data.tools.map((tool) => (
+            <Tool title={tool.title}>{tool.description}</Tool>
+          ))}
+        </ToolsSection>
+      ))
+    }
+  </div>
+</IndexLayout>

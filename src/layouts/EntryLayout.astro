@@ -1,0 +1,44 @@
+---
+import { Container } from "@/components/Container";
+import { Prose } from "@/components/Prose";
+import { formatToDisplay } from "@/lib/date";
+import type { CollectionEntry } from "astro:content";
+import Layout from "@/layouts/Layout.astro";
+import BackButton from "@/components/BackButton.astro";
+
+interface Props {
+  entry: CollectionEntry<"blog">;
+}
+
+const { entry } = Astro.props;
+---
+
+<Layout title={entry.data.title} description={entry.data.description}>
+  <Container className="mt-16 lg:mt-32">
+    <div class="xl:relative">
+      <div class="mx-auto max-w-2xl">
+        <BackButton />
+        <article>
+          <header class="flex flex-col">
+            <h1
+              class="mt-6 text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl"
+            >
+              {entry.data.title}
+            </h1>
+            <time
+              datetime={entry.data.date.toISOString()}
+              class="order-first flex items-center text-base text-zinc-400 dark:text-zinc-500"
+            >
+              <span class="h-4 w-0.5 rounded-full bg-zinc-200 dark:bg-zinc-500"
+              ></span>
+              <span class="ml-3">{formatToDisplay(entry.data.date)}</span>
+            </time>
+          </header>
+          <Prose className="mt-8" data-mdx-content>
+            <slot />
+          </Prose>
+        </article>
+      </div>
+    </div>
+  </Container>
+</Layout>

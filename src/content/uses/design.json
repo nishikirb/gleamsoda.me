@@ -1,0 +1,10 @@
+{
+    "title": "Design",
+    "order": 3,
+    "tools": [
+        {
+            "title": "Figma",
+            "description": "We started using Figma as just a design tool but now it’s become our virtual whiteboard for the entire company. Never would have expected the collaboration features to be the real hook."
+        }
+    ]
+}

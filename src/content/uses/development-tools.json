@@ -1,0 +1,18 @@
+{
+    "title": "Development tools",
+    "order": 2,
+    "tools": [
+        {
+            "title": "Sublime Text 4",
+            "description": "I don’t care if it’s missing all of the fancy IDE features everyone else relies on, Sublime Text is still the best text editor ever made."
+        },
+        {
+            "title": "iTerm2",
+            "description": "I’m honestly not even sure what features I get with this that aren’t just part of the macOS Terminal but it’s what I use."
+        },
+        {
+            "title": "TablePlus",
+            "description": "Great software for working with databases. Has saved me from building about a thousand admin interfaces for my various projects over the years."
+        }
+    ]
+}
