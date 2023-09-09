@@ -149,7 +149,7 @@ function NavItem({
   currentPath: string;
   children: React.ReactNode;
 }) {
-  let isActive = currentPath === href;
+  let isActive = currentPath.indexOf(href) === 0;
 
   return (
     <li>
