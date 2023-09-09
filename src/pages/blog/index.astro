@@ -1,0 +1,23 @@
+---
+import { EntryCard } from "@/components/EntryCard";
+import IndexLayout from "@/layouts/IndexLayout.astro";
+import { getCollection } from "astro:content";
+
+const allEntries = await getCollection("blog", ({ data }) => {
+  return data.public === true;
+}).then((entries) => {
+  return entries.sort((a, b) => {
+    return b.data.date.getTime() - a.data.date.getTime();
+  });
+});
+---
+
+<IndexLayout title="Blog">
+  <div
+    class="md:border-l md:border-zinc-100 md:pl-6 md:dark:border-zinc-700/40"
+  >
+    <div class="flex max-w-3xl flex-col space-y-16">
+      {allEntries.map((entry) => <EntryCard {...entry} />)}
+    </div>
+  </div>
+</IndexLayout>

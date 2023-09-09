@@ -1,0 +1,56 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import { GitHubIcon, TwitterIcon } from "@/components/SocialIcons";
+import { Container } from "@/components/Container";
+import { SocialLink } from "@/components/SocialLink";
+import { contents } from "@/config/contents";
+import { Image } from "astro:assets";
+import "@fontsource-variable/comfortaa";
+---
+
+<Layout>
+  <Container className="mt-9">
+    <div class="max-w-2xl">
+      <p class="mt-6 text-base text-zinc-600 dark:text-zinc-400">
+        I’m gleamsoda, a freelance software developer based in Tokyo.
+      </p>
+      <div class="mt-6 flex gap-6">
+        <SocialLink
+          href="https://twitter.com/gleamsoda"
+          aria-label="Follow on Twitter"
+          icon={TwitterIcon}
+        />
+        <SocialLink
+          href="https://github.com/gleamsoda"
+          aria-label="Follow on GitHub"
+          icon={GitHubIcon}
+        />
+      </div>
+    </div>
+  </Container>
+  <Container className="mt-24 md:mt-28">
+    <div
+      class="mx-auto mt-16 grid max-w-2xl auto-rows-fr grid-cols-1 gap-8 sm:mt-20 lg:mx-0 lg:max-w-none lg:grid-cols-3"
+    >
+      {
+        contents.map((content) => (
+          <article class="relative isolate flex flex-col justify-end overflow-hidden rounded-2xl bg-zinc-900 px-8 pb-8 pt-40 sm:pt-24 lg:pt-40">
+            <Image
+              src={content.image}
+              alt=""
+              class="absolute inset-0 -z-10 h-full w-full object-cover"
+            />
+            <div class="absolute inset-0 -z-10 bg-gradient-to-t from-zinc-900 via-zinc-900/40" />
+            <div class="absolute inset-0 -z-10 rounded-2xl ring-1 ring-inset ring-zinc-900/10" />
+            <h3 class="font-['Comfortaa'] mt-3 text-lg font-medium leading-6 text-white">
+              <a href={content.href}>
+                <span class="absolute inset-0" />
+                {content.name}
+              </a>
+            </h3>
+          </article>
+        ))
+      }
+    </div>
+  </Container>
+</Layout>
