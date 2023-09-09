@@ -12,6 +12,7 @@
   "dependencies": {
     "@astrojs/mdx": "^1.0.0",
     "@astrojs/react": "^3.0.0",
+    "@astrojs/sitemap": "^3.0.0",
     "@astrojs/tailwind": "^5.0.0",
     "@fontsource-variable/comfortaa": "^5.0.8",
     "@headlessui/react": "^1.7.17",
