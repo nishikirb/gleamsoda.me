@@ -4,7 +4,7 @@ import IndexLayout from "@/layouts/IndexLayout.astro";
 import { getCollection } from "astro:content";
 
 const allEntries = await getCollection("blog", ({ data }) => {
-  return data.public === true;
+  return !data.draft;
 }).then((entries) => {
   return entries.sort((a, b) => {
     return b.data.date.getTime() - a.data.date.getTime();

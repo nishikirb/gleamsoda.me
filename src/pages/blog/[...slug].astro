@@ -4,7 +4,7 @@ import EntryLayout from "@/layouts/EntryLayout.astro";
 
 export async function getStaticPaths() {
   const allEntries = await getCollection("blog", ({ data }) => {
-    return data.public === true;
+    return !data.draft;
   });
   return allEntries.map((entry) => ({
     params: { slug: entry.slug },
