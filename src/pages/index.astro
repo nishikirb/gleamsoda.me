@@ -1,27 +1,27 @@
 ---
-import Layout from "@/layouts/Layout.astro";
-import { GitHubIcon, TwitterIcon } from "@/components/SocialIcons";
 import { Container } from "@/components/Container";
+import { GitHubIcon, TwitterIcon } from "@/components/SocialIcons";
 import { SocialLink } from "@/components/SocialLink";
 import { contents } from "@/config/contents";
-import { Image } from "astro:assets";
+import Layout from "@/layouts/Layout.astro";
 import "@fontsource-variable/comfortaa";
+import { Image } from "astro:assets";
 ---
 
 <Layout>
   <Container className="mt-9">
     <div class="max-w-2xl">
       <p class="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-        I’m gleamsoda, a freelance software developer based in Tokyo.
+        I’m nishikirb, a freelance software developer based in Tokyo.
       </p>
       <div class="mt-6 flex gap-6">
         <SocialLink
-          href="https://twitter.com/gleamsoda"
+          href="https://twitter.com/nishikirb"
           aria-label="Follow on Twitter"
           icon={TwitterIcon}
         />
         <SocialLink
-          href="https://github.com/gleamsoda"
+          href="https://github.com/nishikirb"
           aria-label="Follow on GitHub"
           icon={GitHubIcon}
         />

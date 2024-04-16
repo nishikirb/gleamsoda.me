@@ -6,8 +6,8 @@ export type Site = {
 };
 
 export const site: Site = {
-  owner: "gleamsoda",
-  name: "gleamsoda.me",
-  description: "gleamsoda.me",
-  url: "https://gleamsoda.me",
+  owner: "nishikirb",
+  name: "nishikirb.me",
+  description: "nishikirb.me",
+  url: "https://nishikirb.me",
 };

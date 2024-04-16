@@ -1,5 +1,5 @@
 {
-  "name": "gleamsoda.me",
+  "name": "nishikirb.me",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
@@ -26,5 +26,8 @@
     "remark-gfm": "^3.0.1",
     "sharp": "^0.32.5",
     "tailwindcss": "^3.0.24"
+  },
+  "devDependencies": {
+    "vite": "^4.4.9"
   }
 }

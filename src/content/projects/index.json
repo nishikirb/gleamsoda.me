@@ -3,7 +3,7 @@
         "name": "donut",
         "description": "Tiny dotfiles management tool written in Go.",
         "link": {
-            "href": "https://github.com/gleamsoda/donut",
+            "href": "https://github.com/nishikirb/donut",
             "label": "github.com"
         },
         "logo": "../../assets/projects/donut.png"
